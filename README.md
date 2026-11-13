@@ -281,13 +281,23 @@ In full compliance with NASA Space Apps Challenge 2026 rules regarding transpare
 
 ## 13. Team & Acknowledgements
 
-### Team RISING_CODERS_X
-* **Abdullah Al-Yamin** — *Team Lead & System Architect*
-* **Abid Hasan Ziden** — *Remote Sensing & Earth Science Lead*
-* **Farhan Israq Jami** — *Frontend Engineering & Visualizations*
-* **Mashrafi Elahi** — *UI/UX & Creative Direction*
-* **Md. Tahmid Alam** — *Statistical Mathematics & Data Pipelines*
-* **Lutful Ahmed Nadim** — *Quality Assurance & Mobile Optimization*
+### Team RISING_CODERS_X — Project Team Roles
+
+| Team Member Names | Primary Project Role |
+| :--- | :--- |
+| **Yamin** (Abdullah Al-Yamin) | **Builder**, **Presenter** |
+| **Mashrafi** (Mashrafi Elahi) | **Data Person**, **Presenter** |
+| **Tahmid** (Md. Tahmid Alam) | **Designer** |
+| **Zidan** (Abid Hasan Zidan) | **Presenter** |
+| **Nadim** (Lutful Ahmed Nadim) | **Presenter** |
+| **Jami** (Farhan Israq Jami) | **Video Person** |
+
+#### Official Space Apps Submission Role Allocation
+* **Builder:** Yamin
+* **Data Person:** Mashrafi
+* **Designer:** Tahmid
+* **Presenter:** Yamin, Zidan, Mashrafi, Nadim
+* **Video Person:** Jami
 
 Developed for the **NASA Space Apps Challenge 2026**.  
 *For questions, inquiries, or research collaboration, please open an issue in this repository.*
