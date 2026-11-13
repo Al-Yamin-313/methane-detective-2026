@@ -27,9 +27,9 @@
 4. [Technology Stack](#4-technology-stack)
 5. [Visual Walkthrough & Evidence](#5-visual-walkthrough--evidence)
 6. [System Requirements](#6-system-requirements)
-7. [Run Locally (Beginner Instructions)](#7-run-locally-beginner-instructions)
+7. [Web Application: Setup & Execution Guide](#7-web-application-setup--execution-guide)
 8. [Testing & Scientific Verification](#8-testing--scientific-verification)
-9. [Android APK Installation Guide](#9-android-apk-installation-guide)
+9. [Android Mobile App (APK): Installation & Build Guide](#9-android-mobile-app-apk-installation--build-guide)
 10. [NASA & Partner Agency Data Attribution](#10-nasa--partner-agency-data-attribution)
 11. [Scientific Methodology, Assumptions & Limitations](#11-scientific-methodology-assumptions--limitations)
 12. [AI Tools & Transparency Statement](#12-ai-tools--transparency-statement)
@@ -149,14 +149,14 @@ By evaluating these variables across contrasting climate regimes (the hyper-humi
 
 ---
 
-## 7. Run Locally (Beginner Instructions)
+## 7. Web Application: Setup & Execution Guide
 
-### Windows Quick Start (1-Click)
-Double-click `run_app.bat` in the project root. It will automatically verify dependencies, install npm packages if needed, and start the development server at `http://localhost:5173`.
+### Option A: Windows Quick Start (1-Click)
+Double-click `run_app.bat` in the project root. It will automatically verify dependencies, install npm packages if needed, and launch the development server at `http://localhost:5173`.
 
 ---
 
-### Step-by-Step Manual Setup
+### Option B: Step-by-Step Manual Setup (Cross-Platform)
 
 #### 1. Clone the repository
 ```bash
@@ -183,6 +183,18 @@ http://localhost:5173
 npm run build
 ```
 The compiled, minified production assets will be output to the `dist/` directory.
+
+#### 5. Preview the production build locally
+```bash
+npm run preview
+```
+Runs a local static web server serving the optimized `dist/` bundle on `http://localhost:4173`.
+
+#### 6. Static Web Hosting Deployment (Optional)
+The output `dist/` folder is a zero-backend, pure client-side Single Page Application (SPA). It can be deployed immediately to:
+* **Vercel / Netlify:** Link repository or drag-and-drop the `dist/` folder.
+* **GitHub Pages:** Deploy `dist/` via `gh-pages` branch or GitHub Actions.
+* **Surge / Cloudflare Pages:** Point build output directory to `dist/`.
 
 ---
 
@@ -214,20 +226,83 @@ SCIENTIFIC VERIFICATION COMPLETE: 100% PASSING
 
 ---
 
-## 9. Android APK Installation Guide
+## 9. Android Mobile App (APK): Installation & Build Guide
 
-A pre-compiled standalone Android APK is available directly in the [GitHub Releases](https://github.com/Al-Yamin-313/methane-detective-2026/releases) section of this repository.
+Methane Detective is wrapped into a native Android application using Capacitor 8.6, enabling hardware-accelerated touch gestures, offline data caching, and native mobile responsiveness.
 
-### How to Install on Android:
-1. On your Android smartphone or tablet (Android 8.0+), open the [Releases](https://github.com/Al-Yamin-313/methane-detective-2026/releases) page.
-2. Download `Methane_Detective_v3.2.apk`.
-3. Open your device's **Downloads** folder and tap the downloaded `.apk` file.
-4. If Android displays *"For your security, your phone is not allowed to install unknown apps from this source"*, tap **Settings** and toggle **"Allow from this source"**.
-5. Tap **Install** and then **Open**.
+---
+
+### Method A: Install the Pre-Compiled APK (Recommended for Judges & Evaluators)
+
+A pre-compiled standalone Android APK is available directly in the [GitHub Releases](https://github.com/Al-Yamin-313/methane-detective-2026/releases/tag/v3.2.0) section of this repository.
+
+#### Step-by-Step Installation:
+1. On your Android smartphone or tablet (Android 8.0 Oreo or higher), open the [Releases](https://github.com/Al-Yamin-313/methane-detective-2026/releases/tag/v3.2.0) page.
+2. Tap and download `Methane_Detective_v3.2.apk` (5.58 MB).
+3. Open your device's **Downloads** folder (or notification shade) and tap `Methane_Detective_v3.2.apk`.
+4. If Android displays *"For your security, your phone is not allowed to install unknown apps from this source"*:
+   - Tap **Settings** on the prompt.
+   - Toggle **"Allow from this source"** to ON.
+   - Tap the back button.
+5. Tap **Install** and then tap **Open**.
 
 > [!NOTE]
 > * **Internet Connection:** The app requires an active internet connection to stream satellite map tiles (Esri / NASA GIBS) and live NASA CMR API queries.
 > * **Package Signing:** This is a debug-signed build intended for hackathon evaluation and testing. It is not currently published on the Google Play Store.
+
+---
+
+### Method B: Build the Android APK from Source (Developer Mode)
+
+If you wish to compile the Android application locally from source:
+
+#### 1. Prerequisites
+* **Java Development Kit:** JDK 17 (Eclipse Temurin / OpenJDK 17)
+* **Android SDK:** Platform API Level 34 with Android Build-Tools 34.0.0
+* Environment variables `JAVA_HOME` and `ANDROID_HOME` configured.
+
+#### 2. Configure Android SDK Path
+Copy `android/local.properties.example` to `android/local.properties` and verify your SDK directory:
+```properties
+# Windows example:
+sdk.dir=C\:\\Users\\<YourUsername>\\AppData\\Local\\Android\\Sdk
+# macOS example:
+# sdk.dir=/Users/<YourUsername>/Library/Android/sdk
+# Linux example:
+# sdk.dir=/home/<YourUsername>/Android/Sdk
+```
+
+#### 3. Build Web Bundle & Sync Capacitor
+```bash
+# Compile web application
+npm run build
+
+# Synchronize web assets into the Android native project
+npx cap sync android
+```
+
+#### 4. Compile the APK via Gradle Wrapper
+* **On Windows (PowerShell / Command Prompt):**
+  ```cmd
+  cd android
+  .\gradlew.bat assembleDebug
+  ```
+* **On macOS / Linux:**
+  ```bash
+  cd android
+  chmod +x gradlew
+  ./gradlew assembleDebug
+  ```
+
+#### 5. Locate the Built APK
+The compiled debug APK will be generated at:
+```
+android/app/build/outputs/apk/debug/app-debug.apk
+```
+You can install it directly to a connected Android device or emulator via:
+```bash
+adb install android/app/build/outputs/apk/debug/app-debug.apk
+```
 
 ---
 
