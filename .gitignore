@@ -1,0 +1,52 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Production build outputs
+dist/
+build/
+bin/
+obj/
+out/
+
+# TypeScript build cache
+tsconfig.tsbuildinfo
+
+# Binary artifacts & packages (uploaded to GitHub Releases)
+*.apk
+*.aab
+*.zip
+*.tar.gz
+
+# Environment variables & secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Android / Gradle local configuration and build artifacts
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/**/build/
+android/**/.gradle/
+.gradle/
+local.properties
+
+# Editor & OS metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+*.swp
+*~
+
+# Temporary test profiles and logs
+tmp_*
+*.log

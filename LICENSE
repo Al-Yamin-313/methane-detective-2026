@@ -1,0 +1,40 @@
+MIT License
+
+Copyright (c) 2026 RISING_CODERS_X
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+### Third-Party Data Attribution & Scientific Disclaimers
+
+1. **NASA Space Apps Challenge Non-Endorsement Notice:**
+   This project was created by team RISING_CODERS_X for the NASA Space Apps Challenge 2026 under the challenge track *"Be An Earth System Trend Detective!"*. NASA does not endorse this or any other participant project. Use of NASA satellite data, imagery, or mission identifiers complies with NASA Earth Science open-data guidelines and does not imply government affiliation or endorsement.
+
+2. **Earth Observation Data Products & Missions:**
+   - **NASA EMIT:** Earth Surface Mineral Dust Source Investigation (EMIT) Level-2B Estimated Methane Plume Complexes 60 m V002 (`EMIT_L2B_CH4PLM_002`), courtesy of NASA JPL / Caltech and LP DAAC. CMR Granule Concept: `C2408758986-POCLOUD`.
+   - **Sentinel-5P TROPOMI:** Contains modified Copernicus Sentinel data (2019–2024) processed by ESA / KNMI / SRON (Algorithm Processor v02.09.01, PUM SRON-S5P-LEV2-MA-001).
+   - **NASA GPM IMERG:** Global Precipitation Measurement (GPM) Level 3 IMERG Monthly Precipitation (`GPM_3IMERGM_07`), courtesy of NASA Goddard Earth Sciences Data and Information Services Center (GES DISC) and Giovanni.
+   - **NASA/CNES SWOT:** Surface Water and Ocean Topography (SWOT) KaRIn River Single Pass Vector Product (`SWOT_L2_HR_RiverSP_2.0`), courtesy of NASA PO.DAAC / CNES / Hydrocron API.
+   - **NASA Terra MODIS:** MODIS/Terra Vegetation Indices 16-Day L3 Global 250m SIN Grid V061 (`MOD13Q1`), courtesy of NASA LP DAAC.
+   - **NASA EOSDIS GIBS:** Blue Marble Next Generation and Terra MODIS Corrected Reflectance True Color imagery visualized via NASA EOSDIS Global Imagery Browse Services (GIBS).
+
+3. **Geographic Basemap Services:**
+   - **Esri World Imagery:** Tiles © Esri, Maxar, Earthstar Geographics, and the GIS User Community.
+   - **CARTO Dark Matter:** Basemap tiles © CARTO, OpenStreetMap contributors (ODbL).
