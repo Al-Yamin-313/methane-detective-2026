@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#142240"/>
+      <stop offset="100%" stop-color="#0B1426"/>
+    </radialGradient>
+    <linearGradient id="plumeGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B2B" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#FF8A4F" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FFCE5C" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="earthGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#1A3359"/>
+      <stop offset="95%" stop-color="#2F4D7E"/>
+      <stop offset="100%" stop-color="#7CC4FF"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="192" height="192" rx="36" fill="url(#bgGrad)"/>
+  <rect width="192" height="192" rx="36" fill="none" stroke="#2F4D7E" stroke-width="2"/>
+
+  <!-- Earth Globe -->
+  <circle cx="96" cy="100" r="54" fill="url(#earthGlow)" stroke="#7CC4FF" stroke-width="2"/>
+
+  <!-- Continents Silhouette -->
+  <path d="M78 80 Q88 74 98 82 Q106 88 114 84 Q120 92 116 102 Q108 112 100 120 Q92 128 84 122 Q76 116 72 106 Q68 96 78 80 Z" fill="#244573" opacity="0.8"/>
+
+  <!-- Methane Plume Rising from Point Source -->
+  <path d="M96 110 C86 96 82 82 92 68 C96 62 104 54 96 40 C106 50 112 66 104 80 C100 88 102 98 96 110 Z" fill="url(#plumeGrad)"/>
+  <circle cx="96" cy="110" r="4.5" fill="#FF4F4F"/>
+  <circle cx="96" cy="110" r="8" fill="none" stroke="#FF8A4F" stroke-width="1.5" stroke-dasharray="2 2"/>
+
+  <!-- Orbital Track -->
+  <ellipse cx="96" cy="98" rx="74" ry="32" fill="none" stroke="#7CC4FF" stroke-width="1.5" stroke-dasharray="4 4" transform="rotate(-25 96 98)" opacity="0.6"/>
+
+  <!-- Orbiting Satellite -->
+  <g transform="translate(142, 54) rotate(20)">
+    <rect x="-8" y="-4" width="16" height="8" rx="2" fill="#DCE6F5"/>
+    <!-- Solar Panels -->
+    <rect x="-20" y="-3" width="10" height="6" rx="1" fill="#7CC4FF" stroke="#142240" stroke-width="0.5"/>
+    <rect x="10" y="-3" width="10" height="6" rx="1" fill="#7CC4FF" stroke="#142240" stroke-width="0.5"/>
+    <!-- Sensor dot -->
+    <circle cx="0" cy="4" r="1.5" fill="#7CF0BC"/>
+  </g>
+
+  <!-- Crosshair Reticle Corners -->
+  <path d="M24 38 L24 24 L38 24" fill="none" stroke="#7CC4FF" stroke-width="2" opacity="0.5"/>
+  <path d="M168 38 L168 24 L154 24" fill="none" stroke="#7CC4FF" stroke-width="2" opacity="0.5"/>
+  <path d="M24 154 L24 168 L38 168" fill="none" stroke="#7CC4FF" stroke-width="2" opacity="0.5"/>
+  <path d="M168 154 L168 168 L154 168" fill="none" stroke="#7CC4FF" stroke-width="2" opacity="0.5"/>
+</svg>
